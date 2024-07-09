@@ -4,7 +4,15 @@ import React from 'react'
 
 function Home() {
   return (
-    <div>Home</div>
+    <div className='homescreen'>
+
+      <h2 className='home-title'>Latest Products</h2>
+
+      <div className="home-products">
+        
+      </div>
+
+    </div>
   )
 }
 
