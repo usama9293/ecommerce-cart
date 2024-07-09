@@ -1,26 +1,29 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Screens/Home';
+import Cart from './Screens/Cart';
+import Product from './Screens/Product';
+import Navbar from './Components/Navbar';
+import BackDrop from './Components/BackDrop';
+import SideDrawer from './Components/SideDrawer';
+import { useState } from 'react';
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import Home from './Screens/Home'
-import Cart from './Screens/Cart'
-import Product from './Screens/Product'
-import Navbar from './Components/Navbar'
 function App() {
+  const [sideToggle, setSideToggle] = useState(false);
+
   return (
-
-
     <Router>
-      <Navbar />
+      <Navbar click={() => setSideToggle(true)} />
+      <SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
+      <BackDrop show={sideToggle} click={() => setSideToggle(false)} />
       <main>
         <Routes>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/cart' component={Cart} />
-          <Route exact path='/product/:id' component={Product} />
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/product/:id" element={<Product />} />
         </Routes>
       </main>
     </Router>
-
-
-  )
+  );
 }
 
-export default App
+export default App;

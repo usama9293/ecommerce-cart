@@ -2,14 +2,11 @@ import  { useState } from 'react';
 import './navbar.css';
 import { Link } from 'react-router-dom';
 import { FaCartShopping } from 'react-icons/fa6';
+import PropTypes from 'prop-types';
+function Navbar({click}) {
+    
 
-function Navbar() {
-    const [menuOpen, setMenuOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
-
+   
     return (
         <div className='navbar'>
             {/* logo */}
@@ -18,7 +15,7 @@ function Navbar() {
             </div>
 
             {/* links */}
-            <div className={`navbar-links ${menuOpen ? 'active' : ''}`}>
+            <div className={`navbar-links`}>
                 <ul>
                     <li>
                         <Link to={'/cart'} className='cart-link'>
@@ -34,7 +31,7 @@ function Navbar() {
             </div>
 
             {/* menu */}
-            <div className='menu' onClick={toggleMenu}>
+            <div className='menu' onClick={click}>
                 <div></div>
                 <div></div>
                 <div></div>
@@ -42,5 +39,10 @@ function Navbar() {
         </div>
     );
 }
+
+Navbar.propTypes = {
+    click: PropTypes.func.isRequired,
+
+  };
 
 export default Navbar;
