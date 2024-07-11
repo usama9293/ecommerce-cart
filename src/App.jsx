@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Screens/Home';
 import Cart from './Screens/Cart';
-import Product from './Screens/Product';
+import Product from './Components/Product';
 import Navbar from './Components/Navbar';
 import BackDrop from './Components/BackDrop';
 import SideDrawer from './Components/SideDrawer';

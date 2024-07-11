@@ -1,4 +1,5 @@
 import './home.css'
+import Product from '../Components/Product'
 
 import React from 'react'
 
@@ -9,7 +10,12 @@ function Home() {
       <h2 className='home-title'>Latest Products</h2>
 
       <div className="home-products">
-        
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+
       </div>
 
     </div>

@@ -1,0 +1,117 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 16px auto; /* Increased margin for better spacing */
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 300px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjusted shadow for better appearance */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.product:hover {
+    transform: scale(1.05); /* Slightly scale up on hover for better UX */
+}
+
+.product > img {
+    height: 170px;
+    width: 100%; /* Ensure the image takes the full width */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center align text */
+    width: 100%;
+}
+
+.product_info > p {
+    margin-bottom: 8px;
+}
+
+.info_price {
+    font-weight: bold;
+}
+
+.info_name {
+    font-size: 1.2rem;
+    margin-top: 2px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Ensure text overflow is handled gracefully */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.product-descrip {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem; /* Add margin for better spacing */
+    color: #666; /* Lighter color for description */
+}
+
+.info_btn {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    color: #171717;
+    background-color: #ccc;
+    padding: 8px 16px;
+    border: 1px solid #171717;
+    border-radius: 5px; /* Slight rounding of button corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.info_btn:hover {
+    background-color: #171717;
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .product {
+        width: 250px;
+    }
+}
+
+@media (max-width: 992px) {
+    .product {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product {
+        width: 290px;
+    }
+
+    .info_name {
+        font-size: 1rem;
+    }
+
+    .product-descrip {
+        font-size: 0.7rem;
+    }
+
+    .info_btn {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .product {
+        width: 100%;
+        margin: 16px 0; /* Ensure margin is consistent */
+    }
+
+    .product > img {
+        height: 150px;
+    }
+}
