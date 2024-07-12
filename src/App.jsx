@@ -5,6 +5,7 @@ import Product from './Components/Product';
 import Navbar from './Components/Navbar';
 import BackDrop from './Components/BackDrop';
 import SideDrawer from './Components/SideDrawer';
+ import ProductScreen from './Screens/productScreen';     
 import { useState } from 'react';
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/product/:id" element={<Product />} />
+          <Route path="/product/:id" element={<ProductScreen />} />
         </Routes>
       </main>
     </Router>
